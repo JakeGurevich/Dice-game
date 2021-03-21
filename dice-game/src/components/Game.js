@@ -98,25 +98,38 @@ class Game extends React.Component {
     console.log(this.state.sum);
 
     return (
-      <div className="game">
+      <div className="container">
         <input
           value={this.state.winScore}
           onChange={(e) => this.inputHandler(e)}
         />
         <Button onClick={() => this.randomDice(2)} style="Roll Dice" />
         <Button onClick={() => this.holdResults()} style="Hold" />
+        <div className="game">
+          <div className="player">
+            <Dice results={this.state.rollResults} />
+            <Player
+              currentPl={this.state.nextPlayer ? "2" : "1"}
+              currentSum={this.state.sum}
+            />
+          </div>
 
-        <Dice results={this.state.rollResults} />
-        <Player
-          currentPl={this.state.nextPlayer ? "2" : "1"}
-          currentSum={this.state.sum}
-        />
-        <div className="current">Current : {this.state.currentSum}</div>
-        <div className="targetScore">Target Score : {this.state.winScore}</div>
+          <div className="info">
+            <div className="currentInfo">
+              <div className="current">Current : {this.state.currentSum}</div>
+              <div className="targetScore">
+                Target Score : {this.state.winScore}
+              </div>
+            </div>
 
-        <InfoCard p1={this.state.globalScore} p2={this.state.globalScore2} />
+            <InfoCard
+              p1={this.state.globalScore}
+              p2={this.state.globalScore2}
+            />
+          </div>
 
-        <div>{this.state.win ? "You won !" : null}</div>
+          <div>{this.state.win ? "You won !" : null}</div>
+        </div>
       </div>
     );
   }

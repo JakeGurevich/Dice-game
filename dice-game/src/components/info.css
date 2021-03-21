@@ -1,7 +1,7 @@
 .info {
   width: 300px;
-  background: lightgray;
-  border: 2px solid red;
+  background: rgb(162, 207, 243);
+  /* border: 2px solid rgb(150, 199, 238); */
   border-radius: 10px;
   text-align: center;
 }

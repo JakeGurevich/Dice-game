@@ -4,8 +4,19 @@ input[type="text"] {
   color: rgb(62, 219, 122);
 }
 .current {
-  width: 100px;
+  width: 50%;
   height: 40px;
   background-color: cornsilk;
   color: goldenrod;
+}
+.game {
+  display: flex;
+}
+.targetScore {
+  width: 50%;
+  height: 40px;
+  background: khaki;
+}
+.currentInfo {
+  display: flex;
 }
