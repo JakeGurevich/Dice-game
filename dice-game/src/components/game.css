@@ -1,0 +1,11 @@
+input[type="text"] {
+  border: 3px solid rgb(163, 163, 241);
+  border-radius: 6px;
+  color: rgb(62, 219, 122);
+}
+.current {
+  width: 100px;
+  height: 40px;
+  background-color: cornsilk;
+  color: goldenrod;
+}

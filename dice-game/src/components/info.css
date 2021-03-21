@@ -1,0 +1,7 @@
+.info {
+  width: 300px;
+  background: lightgray;
+  border: 2px solid red;
+  border-radius: 10px;
+  text-align: center;
+}
