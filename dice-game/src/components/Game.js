@@ -107,11 +107,13 @@ class Game extends React.Component {
         <Button onClick={() => this.holdResults()} style="Hold" />
         <div className="game">
           <div className="player">
-            <Dice results={this.state.rollResults} />
             <Player
               currentPl={this.state.nextPlayer ? "2" : "1"}
               currentSum={this.state.sum}
             />
+          </div>
+          <div className="dice">
+            <Dice results={this.state.rollResults} />
           </div>
 
           <div className="info">
